@@ -1,0 +1,405 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{394dd6c2-c75e-4259-92f8-217942663fb9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\cgame">
+      <UniqueIdentifier>{327aa60a-31dc-4387-b0fc-d27c438712b8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\cgame\win32">
+      <UniqueIdentifier>{ddd6a9f0-7cf5-4c80-9f4f-9c3f55e8e66e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\cgame\cvar">
+      <UniqueIdentifier>{87ebbcd9-a737-452b-8564-f38c8ca6df8b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\bgame">
+      <UniqueIdentifier>{0c6c39b6-8ef6-4d7e-a41f-b4f414c989d6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\bgame\win32">
+      <UniqueIdentifier>{5149e370-06d1-418f-93f5-8b82a4be6f70}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\bgame\str">
+      <UniqueIdentifier>{f9b03384-94b0-4624-b688-b4dbac023451}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\bgame\cvar">
+      <UniqueIdentifier>{3891f38e-eefb-4a2f-b56a-fbac6a0da9d6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\ui">
+      <UniqueIdentifier>{368b44b8-0cc1-4449-afd5-34ed99f3a546}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{0c51a45e-bca2-40b3-b78d-e178b5b52c79}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\cgame">
+      <UniqueIdentifier>{50bf1da8-a2f3-42f4-858b-255c6d1c79c9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\cgame\cvar">
+      <UniqueIdentifier>{42c04221-4fc6-41f6-8e62-2025c540ab48}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\bgame">
+      <UniqueIdentifier>{72212e67-6b96-4ecb-b074-5780b5a1743c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\bgame\win32">
+      <UniqueIdentifier>{6faed98a-b1b9-4e43-8078-7c854a82aaa8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\bgame\cvar">
+      <UniqueIdentifier>{4fadc19e-8b41-40e6-ae5a-0981dcd81bbe}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\ui">
+      <UniqueIdentifier>{093daed3-2132-4cd0-8c9d-622b23472e80}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="CBulletVolume.cpp">
+      <Filter>Source Files\cgame</Filter>
+    </ClCompile>
+    <ClCompile Include="cg_atmospheric.cpp">
+      <Filter>Source Files\cgame</Filter>
+    </ClCompile>
+    <ClCompile Include="cg_character.cpp">
+      <Filter>Source Files\cgame</Filter>
+    </ClCompile>
+    <ClCompile Include="cg_commandmap.cpp">
+      <Filter>Source Files\cgame</Filter>
+    </ClCompile>
+    <ClCompile Include="cg_consolecmds.cpp">
+      <Filter>Source Files\cgame</Filter>
+    </ClCompile>
+    <ClCompile Include="cg_debriefing.cpp">
+      <Filter>Source Files\cgame</Filter>
+    </ClCompile>
+    <ClCompile Include="cg_draw.cpp">
+      <Filter>Source Files\cgame</Filter>
+    </ClCompile>
+    <ClCompile Include="cg_drawtools.cpp">
+      <Filter>Source Files\cgame</Filter>
+    </ClCompile>
+    <ClCompile Include="cg_effects.cpp">
+      <Filter>Source Files\cgame</Filter>
+    </ClCompile>
+    <ClCompile Include="cg_ents.cpp">
+      <Filter>Source Files\cgame</Filter>
+    </ClCompile>
+    <ClCompile Include="cg_event.cpp">
+      <Filter>Source Files\cgame</Filter>
+    </ClCompile>
+    <ClCompile Include="cg_fireteamoverlay.cpp">
+      <Filter>Source Files\cgame</Filter>
+    </ClCompile>
+    <ClCompile Include="cg_fireteams.cpp">
+      <Filter>Source Files\cgame</Filter>
+    </ClCompile>
+    <ClCompile Include="cg_flamethrower.cpp">
+      <Filter>Source Files\cgame</Filter>
+    </ClCompile>
+    <ClCompile Include="cg_info.cpp">
+      <Filter>Source Files\cgame</Filter>
+    </ClCompile>
+    <ClCompile Include="cg_limbopanel.cpp">
+      <Filter>Source Files\cgame</Filter>
+    </ClCompile>
+    <ClCompile Include="cg_loadpanel.cpp">
+      <Filter>Source Files\cgame</Filter>
+    </ClCompile>
+    <ClCompile Include="cg_localents.cpp">
+      <Filter>Source Files\cgame</Filter>
+    </ClCompile>
+    <ClCompile Include="cg_main.cpp">
+      <Filter>Source Files\cgame</Filter>
+    </ClCompile>
+    <ClCompile Include="cg_marks.cpp">
+      <Filter>Source Files\cgame</Filter>
+    </ClCompile>
+    <ClCompile Include="cg_missionbriefing.cpp">
+      <Filter>Source Files\cgame</Filter>
+    </ClCompile>
+    <ClCompile Include="cg_molotov.cpp">
+      <Filter>Source Files\cgame</Filter>
+    </ClCompile>
+    <ClCompile Include="cg_multiview.cpp">
+      <Filter>Source Files\cgame</Filter>
+    </ClCompile>
+    <ClCompile Include="cg_newDraw.cpp">
+      <Filter>Source Files\cgame</Filter>
+    </ClCompile>
+    <ClCompile Include="cg_particles.cpp">
+      <Filter>Source Files\cgame</Filter>
+    </ClCompile>
+    <ClCompile Include="cg_players.cpp">
+      <Filter>Source Files\cgame</Filter>
+    </ClCompile>
+    <ClCompile Include="cg_playerstate.cpp">
+      <Filter>Source Files\cgame</Filter>
+    </ClCompile>
+    <ClCompile Include="cg_polybus.cpp">
+      <Filter>Source Files\cgame</Filter>
+    </ClCompile>
+    <ClCompile Include="cg_popupmessages.cpp">
+      <Filter>Source Files\cgame</Filter>
+    </ClCompile>
+    <ClCompile Include="cg_predict.cpp">
+      <Filter>Source Files\cgame</Filter>
+    </ClCompile>
+    <ClCompile Include="cg_scoreboard.cpp">
+      <Filter>Source Files\cgame</Filter>
+    </ClCompile>
+    <ClCompile Include="cg_servercmds.cpp">
+      <Filter>Source Files\cgame</Filter>
+    </ClCompile>
+    <ClCompile Include="cg_snapshot.cpp">
+      <Filter>Source Files\cgame</Filter>
+    </ClCompile>
+    <ClCompile Include="cg_sound.cpp">
+      <Filter>Source Files\cgame</Filter>
+    </ClCompile>
+    <ClCompile Include="cg_spawn.cpp">
+      <Filter>Source Files\cgame</Filter>
+    </ClCompile>
+    <ClCompile Include="cg_statsranksmedals.cpp">
+      <Filter>Source Files\cgame</Filter>
+    </ClCompile>
+    <ClCompile Include="cg_syscalls.cpp">
+      <Filter>Source Files\cgame</Filter>
+    </ClCompile>
+    <ClCompile Include="cg_text.cpp">
+      <Filter>Source Files\cgame</Filter>
+    </ClCompile>
+    <ClCompile Include="cg_trails.cpp">
+      <Filter>Source Files\cgame</Filter>
+    </ClCompile>
+    <ClCompile Include="cg_view.cpp">
+      <Filter>Source Files\cgame</Filter>
+    </ClCompile>
+    <ClCompile Include="cg_weapons.cpp">
+      <Filter>Source Files\cgame</Filter>
+    </ClCompile>
+    <ClCompile Include="cg_window.cpp">
+      <Filter>Source Files\cgame</Filter>
+    </ClCompile>
+    <ClCompile Include="CHitVolume.cpp">
+      <Filter>Source Files\cgame</Filter>
+    </ClCompile>
+    <ClCompile Include="Console.cpp">
+      <Filter>Source Files\cgame</Filter>
+    </ClCompile>
+    <ClCompile Include="Engine.cpp">
+      <Filter>Source Files\cgame</Filter>
+    </ClCompile>
+    <ClCompile Include="Font.cpp">
+      <Filter>Source Files\cgame</Filter>
+    </ClCompile>
+    <ClCompile Include="Location.cpp">
+      <Filter>Source Files\cgame</Filter>
+    </ClCompile>
+    <ClCompile Include="LocationDB.cpp">
+      <Filter>Source Files\cgame</Filter>
+    </ClCompile>
+    <ClCompile Include="static.cpp">
+      <Filter>Source Files\cgame</Filter>
+    </ClCompile>
+    <ClCompile Include="win32\cg_hardware.cpp">
+      <Filter>Source Files\cgame\win32</Filter>
+    </ClCompile>
+    <ClCompile Include="cvar\Cvar.cpp">
+      <Filter>Source Files\cgame\cvar</Filter>
+    </ClCompile>
+    <ClCompile Include="cvar\util.cpp">
+      <Filter>Source Files\cgame\cvar</Filter>
+    </ClCompile>
+    <ClCompile Include="..\bgame\bg_animation.cpp">
+      <Filter>Source Files\bgame</Filter>
+    </ClCompile>
+    <ClCompile Include="..\bgame\bg_animgroup.cpp">
+      <Filter>Source Files\bgame</Filter>
+    </ClCompile>
+    <ClCompile Include="..\bgame\bg_attack2.cpp">
+      <Filter>Source Files\bgame</Filter>
+    </ClCompile>
+    <ClCompile Include="..\bgame\bg_campaign.cpp">
+      <Filter>Source Files\bgame</Filter>
+    </ClCompile>
+    <ClCompile Include="..\bgame\bg_character.cpp">
+      <Filter>Source Files\bgame</Filter>
+    </ClCompile>
+    <ClCompile Include="..\bgame\bg_classes.cpp">
+      <Filter>Source Files\bgame</Filter>
+    </ClCompile>
+    <ClCompile Include="..\bgame\bg_jaymod.cpp">
+      <Filter>Source Files\bgame</Filter>
+    </ClCompile>
+    <ClCompile Include="..\bgame\bg_misc.cpp">
+      <Filter>Source Files\bgame</Filter>
+    </ClCompile>
+    <ClCompile Include="..\bgame\bg_molotov.cpp">
+      <Filter>Source Files\bgame</Filter>
+    </ClCompile>
+    <ClCompile Include="..\bgame\bg_pmove.cpp">
+      <Filter>Source Files\bgame</Filter>
+    </ClCompile>
+    <ClCompile Include="..\bgame\bg_slidemove.cpp">
+      <Filter>Source Files\bgame</Filter>
+    </ClCompile>
+    <ClCompile Include="..\bgame\bg_sscript.cpp">
+      <Filter>Source Files\bgame</Filter>
+    </ClCompile>
+    <ClCompile Include="..\bgame\bg_stats.cpp">
+      <Filter>Source Files\bgame</Filter>
+    </ClCompile>
+    <ClCompile Include="..\bgame\bg_tracemap.cpp">
+      <Filter>Source Files\bgame</Filter>
+    </ClCompile>
+    <ClCompile Include="..\bgame\Engine.cpp">
+      <Filter>Source Files\bgame</Filter>
+    </ClCompile>
+    <ClCompile Include="..\bgame\Logger.cpp">
+      <Filter>Source Files\bgame</Filter>
+    </ClCompile>
+    <ClCompile Include="..\bgame\Process.cpp">
+      <Filter>Source Files\bgame</Filter>
+    </ClCompile>
+    <ClCompile Include="..\bgame\q_math.cpp">
+      <Filter>Source Files\bgame</Filter>
+    </ClCompile>
+    <ClCompile Include="..\bgame\q_shared.cpp">
+      <Filter>Source Files\bgame</Filter>
+    </ClCompile>
+    <ClCompile Include="..\bgame\SampledStat.cpp">
+      <Filter>Source Files\bgame</Filter>
+    </ClCompile>
+    <ClCompile Include="..\bgame\win32\bg_cpu.cpp">
+      <Filter>Source Files\bgame\win32</Filter>
+    </ClCompile>
+    <ClCompile Include="..\bgame\win32\Process.cpp">
+      <Filter>Source Files\bgame\win32</Filter>
+    </ClCompile>
+    <ClCompile Include="..\bgame\str\PairDump.cpp">
+      <Filter>Source Files\bgame\str</Filter>
+    </ClCompile>
+    <ClCompile Include="..\bgame\str\util.cpp">
+      <Filter>Source Files\bgame\str</Filter>
+    </ClCompile>
+    <ClCompile Include="..\bgame\cvar\Cvar.cpp">
+      <Filter>Source Files\bgame\cvar</Filter>
+    </ClCompile>
+    <ClCompile Include="..\ui\ui_shared.cpp">
+      <Filter>Source Files\ui</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\bgame\bg_entity_event.cpp.inc">
+      <Filter>Source Files\bgame</Filter>
+    </None>
+    <None Include="..\bgame\bg_entity_event.h.inc">
+      <Filter>Header Files\bgame</Filter>
+    </None>
+    <None Include="cgame.def" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="CBulletVolume.h">
+      <Filter>Header Files\cgame</Filter>
+    </ClInclude>
+    <ClInclude Include="cg_local.h">
+      <Filter>Header Files\cgame</Filter>
+    </ClInclude>
+    <ClInclude Include="cg_molotov.h">
+      <Filter>Header Files\cgame</Filter>
+    </ClInclude>
+    <ClInclude Include="cg_public.h">
+      <Filter>Header Files\cgame</Filter>
+    </ClInclude>
+    <ClInclude Include="cg_text.h">
+      <Filter>Header Files\cgame</Filter>
+    </ClInclude>
+    <ClInclude Include="CHitVolume.h">
+      <Filter>Header Files\cgame</Filter>
+    </ClInclude>
+    <ClInclude Include="Console.h">
+      <Filter>Header Files\cgame</Filter>
+    </ClInclude>
+    <ClInclude Include="Font.h">
+      <Filter>Header Files\cgame</Filter>
+    </ClInclude>
+    <ClInclude Include="Location.h">
+      <Filter>Header Files\cgame</Filter>
+    </ClInclude>
+    <ClInclude Include="LocationDB.h">
+      <Filter>Header Files\cgame</Filter>
+    </ClInclude>
+    <ClInclude Include="tr_types.h">
+      <Filter>Header Files\cgame</Filter>
+    </ClInclude>
+    <ClInclude Include="cvar\Cvar.h">
+      <Filter>Header Files\cgame\cvar</Filter>
+    </ClInclude>
+    <ClInclude Include="cvar\impl.h">
+      <Filter>Header Files\cgame\cvar</Filter>
+    </ClInclude>
+    <ClInclude Include="cvar\public.h">
+      <Filter>Header Files\cgame\cvar</Filter>
+    </ClInclude>
+    <ClInclude Include="cvar\util.h">
+      <Filter>Header Files\cgame\cvar</Filter>
+    </ClInclude>
+    <ClInclude Include="..\bgame\bg_attack2.h">
+      <Filter>Header Files\bgame</Filter>
+    </ClInclude>
+    <ClInclude Include="..\bgame\bg_jaymod.h">
+      <Filter>Header Files\bgame</Filter>
+    </ClInclude>
+    <ClInclude Include="..\bgame\bg_local.h">
+      <Filter>Header Files\bgame</Filter>
+    </ClInclude>
+    <ClInclude Include="..\bgame\bg_molotov.h">
+      <Filter>Header Files\bgame</Filter>
+    </ClInclude>
+    <ClInclude Include="..\bgame\bg_public.h">
+      <Filter>Header Files\bgame</Filter>
+    </ClInclude>
+    <ClInclude Include="..\bgame\Engine.h">
+      <Filter>Header Files\bgame</Filter>
+    </ClInclude>
+    <ClInclude Include="..\bgame\impl.h">
+      <Filter>Header Files\bgame</Filter>
+    </ClInclude>
+    <ClInclude Include="..\bgame\Logger.h">
+      <Filter>Header Files\bgame</Filter>
+    </ClInclude>
+    <ClInclude Include="..\bgame\NewAllocator.h">
+      <Filter>Header Files\bgame</Filter>
+    </ClInclude>
+    <ClInclude Include="..\bgame\Process.h">
+      <Filter>Header Files\bgame</Filter>
+    </ClInclude>
+    <ClInclude Include="..\bgame\q_shared.h">
+      <Filter>Header Files\bgame</Filter>
+    </ClInclude>
+    <ClInclude Include="..\bgame\SampledStat.h">
+      <Filter>Header Files\bgame</Filter>
+    </ClInclude>
+    <ClInclude Include="..\bgame\surfaceflags.h">
+      <Filter>Header Files\bgame</Filter>
+    </ClInclude>
+    <ClInclude Include="..\bgame\str\PairDump.h">
+      <Filter>Header Files\bgame\win32</Filter>
+    </ClInclude>
+    <ClInclude Include="..\bgame\str\public.h">
+      <Filter>Header Files\bgame\win32</Filter>
+    </ClInclude>
+    <ClInclude Include="..\bgame\str\util.h">
+      <Filter>Header Files\bgame\win32</Filter>
+    </ClInclude>
+    <ClInclude Include="..\bgame\cvar\Cvar.h">
+      <Filter>Header Files\bgame\cvar</Filter>
+    </ClInclude>
+    <ClInclude Include="..\bgame\cvar\impl.h">
+      <Filter>Header Files\bgame\cvar</Filter>
+    </ClInclude>
+    <ClInclude Include="..\bgame\cvar\public.h">
+      <Filter>Header Files\bgame\cvar</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ui\ui_shared.h">
+      <Filter>Header Files\ui</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

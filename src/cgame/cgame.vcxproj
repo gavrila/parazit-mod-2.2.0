@@ -1,0 +1,301 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{68A804FC-00C3-44E2-A479-3DB3D20F943D}</ProjectGuid>
+    <RootNamespace>cgame</RootNamespace>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.40219.1</_ProjectFileVersion>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.\Release\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.\Release\</IntDir>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkIncremental>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.\Debug\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.\Debug\</IntDir>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</LinkIncremental>
+    <PostBuildEventUseInBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</PostBuildEventUseInBuild>
+    <PostBuildEventUseInBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</PostBuildEventUseInBuild>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Midl>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MkTypLibCompatible>true</MkTypLibCompatible>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <TargetEnvironment>Win32</TargetEnvironment>
+      <TypeLibraryName>.\Release/cgame.tlb</TypeLibraryName>
+    </Midl>
+    <ClCompile>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <AdditionalIncludeDirectories>$(SolutionDir);$(SolutionDir)\..\pak;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>NDEBUG;_WINDOWS;CGAMEDLL;_CRT_SECURE_NO_DEPRECATE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <StringPooling>true</StringPooling>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <BufferSecurityCheck>false</BufferSecurityCheck>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>bgame/impl.h</PrecompiledHeaderFile>
+      <PrecompiledHeaderOutputFile>./$(Configuration)/$(ProjectName).pch</PrecompiledHeaderOutputFile>
+      <AssemblerListingLocation>.\Release/</AssemblerListingLocation>
+      <ObjectFileName>.\Release/</ObjectFileName>
+      <ProgramDataBaseFileName>.\Release/</ProgramDataBaseFileName>
+      <WarningLevel>Level2</WarningLevel>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Culture>0x0409</Culture>
+    </ResourceCompile>
+    <Link>
+      <AdditionalOptions>/MACHINE:I386 %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalDependencies>odbc32.lib;odbccp32.lib;iphlpapi.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <OutputFile>../Release/cgame_mp_x86.dll</OutputFile>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <ModuleDefinitionFile>.\cgame.def</ModuleDefinitionFile>
+      <ProgramDatabaseFile>.\Release/cgame_mp_x86.pdb</ProgramDatabaseFile>
+      <GenerateMapFile>true</GenerateMapFile>
+      <MapFileName>.\Release/cgame_mp_x86.map</MapFileName>
+      <SubSystem>Windows</SubSystem>
+      <BaseAddress>0x30000000</BaseAddress>
+      <RandomizedBaseAddress>false</RandomizedBaseAddress>
+      <DataExecutionPrevention>
+      </DataExecutionPrevention>
+      <ImportLibrary>.\Release/cgame_mp_x86.lib</ImportLibrary>
+    </Link>
+    <PostBuildEvent>
+      <Message>Copy to ET</Message>
+      <Command>copy "$(TargetPath)" "$(ETDIR)\jaymod-dev\"</Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Midl>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MkTypLibCompatible>true</MkTypLibCompatible>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <TargetEnvironment>Win32</TargetEnvironment>
+      <TypeLibraryName>.\Debug/cgame.tlb</TypeLibraryName>
+    </Midl>
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>$(SolutionDir);$(SolutionDir)\..\pak;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>_DEBUG;_WINDOWS;CGAMEDLL;_CRT_SECURE_NO_DEPRECATE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>bgame/impl.h</PrecompiledHeaderFile>
+      <PrecompiledHeaderOutputFile>./$(Configuration)/$(ProjectName).pch</PrecompiledHeaderOutputFile>
+      <AssemblerListingLocation>.\Debug/</AssemblerListingLocation>
+      <ObjectFileName>.\Debug/</ObjectFileName>
+      <ProgramDataBaseFileName>.\Debug/</ProgramDataBaseFileName>
+      <BrowseInformation>true</BrowseInformation>
+      <WarningLevel>Level3</WarningLevel>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Culture>0x0409</Culture>
+    </ResourceCompile>
+    <Link>
+      <AdditionalOptions>/MACHINE:I386 %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalDependencies>odbc32.lib;odbccp32.lib;iphlpapi.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <OutputFile>..\Debug/cgame_mp_x86.dll</OutputFile>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <ModuleDefinitionFile>.\cgame.def</ModuleDefinitionFile>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <ProgramDatabaseFile>.\Debug/cgame_mp_x86.pdb</ProgramDatabaseFile>
+      <GenerateMapFile>true</GenerateMapFile>
+      <MapFileName>.\Debug/cgame_mp_x86.map</MapFileName>
+      <SubSystem>Windows</SubSystem>
+      <BaseAddress>0x30000000</BaseAddress>
+      <RandomizedBaseAddress>false</RandomizedBaseAddress>
+      <DataExecutionPrevention>
+      </DataExecutionPrevention>
+      <ImportLibrary>.\Debug/cgame_mp_x86.lib</ImportLibrary>
+    </Link>
+    <PostBuildEvent>
+      <Message>Copy to ET</Message>
+      <Command>copy "$(TargetPath)" "$(ETDIR)\jaymod-dev\"</Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="CBulletVolume.cpp" />
+    <ClCompile Include="cg_atmospheric.cpp" />
+    <ClCompile Include="cg_character.cpp" />
+    <ClCompile Include="cg_commandmap.cpp" />
+    <ClCompile Include="cg_consolecmds.cpp" />
+    <ClCompile Include="cg_debriefing.cpp" />
+    <ClCompile Include="cg_draw.cpp" />
+    <ClCompile Include="cg_drawtools.cpp" />
+    <ClCompile Include="cg_effects.cpp" />
+    <ClCompile Include="cg_ents.cpp" />
+    <ClCompile Include="cg_event.cpp" />
+    <ClCompile Include="cg_fireteamoverlay.cpp" />
+    <ClCompile Include="cg_fireteams.cpp" />
+    <ClCompile Include="cg_flamethrower.cpp" />
+    <ClCompile Include="cg_info.cpp" />
+    <ClCompile Include="cg_limbopanel.cpp" />
+    <ClCompile Include="cg_loadpanel.cpp" />
+    <ClCompile Include="cg_localents.cpp" />
+    <ClCompile Include="cg_main.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="cg_marks.cpp" />
+    <ClCompile Include="cg_missionbriefing.cpp" />
+    <ClCompile Include="cg_molotov.cpp" />
+    <ClCompile Include="cg_multiview.cpp" />
+    <ClCompile Include="cg_newDraw.cpp" />
+    <ClCompile Include="cg_particles.cpp" />
+    <ClCompile Include="cg_players.cpp" />
+    <ClCompile Include="cg_playerstate.cpp" />
+    <ClCompile Include="cg_polybus.cpp" />
+    <ClCompile Include="cg_popupmessages.cpp" />
+    <ClCompile Include="cg_predict.cpp" />
+    <ClCompile Include="cg_scoreboard.cpp" />
+    <ClCompile Include="cg_servercmds.cpp" />
+    <ClCompile Include="cg_snapshot.cpp" />
+    <ClCompile Include="cg_sound.cpp" />
+    <ClCompile Include="cg_spawn.cpp" />
+    <ClCompile Include="cg_statsranksmedals.cpp" />
+    <ClCompile Include="cg_syscalls.cpp" />
+    <ClCompile Include="cg_text.cpp" />
+    <ClCompile Include="cg_trails.cpp" />
+    <ClCompile Include="cg_view.cpp" />
+    <ClCompile Include="cg_weapons.cpp" />
+    <ClCompile Include="cg_window.cpp" />
+    <ClCompile Include="CHitVolume.cpp" />
+    <ClCompile Include="Console.cpp" />
+    <ClCompile Include="Engine.cpp">
+      <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(IntDir)%(Filename)1.obj</ObjectFileName>
+      <XMLDocumentationFileName Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(IntDir)%(Filename)1.xdc</XMLDocumentationFileName>
+      <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(IntDir)%(Filename)1.obj</ObjectFileName>
+      <XMLDocumentationFileName Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(IntDir)%(Filename)1.xdc</XMLDocumentationFileName>
+    </ClCompile>
+    <ClCompile Include="Font.cpp" />
+    <ClCompile Include="Location.cpp" />
+    <ClCompile Include="LocationDB.cpp" />
+    <ClCompile Include="static.cpp" />
+    <ClCompile Include="win32\cg_hardware.cpp" />
+    <ClCompile Include="cvar\Cvar.cpp">
+      <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(IntDir)%(Filename)1.obj</ObjectFileName>
+      <XMLDocumentationFileName Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(IntDir)%(Filename)1.xdc</XMLDocumentationFileName>
+      <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(IntDir)%(Filename)1.obj</ObjectFileName>
+      <XMLDocumentationFileName Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(IntDir)%(Filename)1.xdc</XMLDocumentationFileName>
+    </ClCompile>
+    <ClCompile Include="cvar\util.cpp">
+      <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(IntDir)%(Filename)4.obj</ObjectFileName>
+      <XMLDocumentationFileName Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(IntDir)%(Filename)4.xdc</XMLDocumentationFileName>
+      <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(IntDir)%(Filename)4.obj</ObjectFileName>
+      <XMLDocumentationFileName Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(IntDir)%(Filename)4.xdc</XMLDocumentationFileName>
+    </ClCompile>
+    <ClCompile Include="..\bgame\bg_animation.cpp" />
+    <ClCompile Include="..\bgame\bg_animgroup.cpp" />
+    <ClCompile Include="..\bgame\bg_attack2.cpp" />
+    <ClCompile Include="..\bgame\bg_campaign.cpp" />
+    <ClCompile Include="..\bgame\bg_character.cpp" />
+    <ClCompile Include="..\bgame\bg_classes.cpp" />
+    <ClCompile Include="..\bgame\bg_jaymod.cpp" />
+    <ClCompile Include="..\bgame\bg_misc.cpp" />
+    <ClCompile Include="..\bgame\bg_molotov.cpp" />
+    <ClCompile Include="..\bgame\bg_pmove.cpp" />
+    <ClCompile Include="..\bgame\bg_slidemove.cpp" />
+    <ClCompile Include="..\bgame\bg_sscript.cpp" />
+    <ClCompile Include="..\bgame\bg_stats.cpp" />
+    <ClCompile Include="..\bgame\bg_tracemap.cpp" />
+    <ClCompile Include="..\bgame\Engine.cpp" />
+    <ClCompile Include="..\bgame\Logger.cpp" />
+    <ClCompile Include="..\bgame\Process.cpp" />
+    <ClCompile Include="..\bgame\q_math.cpp" />
+    <ClCompile Include="..\bgame\q_shared.cpp" />
+    <ClCompile Include="..\bgame\SampledStat.cpp" />
+    <ClCompile Include="..\bgame\win32\bg_cpu.cpp" />
+    <ClCompile Include="..\bgame\win32\Process.cpp">
+      <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.\Debug/cgameProcess.obj</ObjectFileName>
+      <XMLDocumentationFileName Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.\Debug/cgameProcess.xdc</XMLDocumentationFileName>
+      <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.\Release/cgameProcess.obj</ObjectFileName>
+      <XMLDocumentationFileName Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.\Release/cgameProcess.obj</XMLDocumentationFileName>
+    </ClCompile>
+    <ClCompile Include="..\bgame\str\PairDump.cpp" />
+    <ClCompile Include="..\bgame\str\util.cpp" />
+    <ClCompile Include="..\bgame\cvar\Cvar.cpp" />
+    <ClCompile Include="..\ui\ui_shared.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\bgame\bg_entity_event.cpp.inc" />
+    <None Include="..\bgame\bg_entity_event.h.inc" />
+    <None Include="cgame.def" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="CBulletVolume.h" />
+    <ClInclude Include="cg_local.h" />
+    <ClInclude Include="cg_molotov.h" />
+    <ClInclude Include="cg_public.h" />
+    <ClInclude Include="cg_text.h" />
+    <ClInclude Include="CHitVolume.h" />
+    <ClInclude Include="Console.h" />
+    <ClInclude Include="Font.h" />
+    <ClInclude Include="Location.h" />
+    <ClInclude Include="LocationDB.h" />
+    <ClInclude Include="tr_types.h" />
+    <ClInclude Include="cvar\Cvar.h" />
+    <ClInclude Include="cvar\impl.h" />
+    <ClInclude Include="cvar\public.h" />
+    <ClInclude Include="cvar\util.h" />
+    <ClInclude Include="..\bgame\bg_attack2.h" />
+    <ClInclude Include="..\bgame\bg_jaymod.h" />
+    <ClInclude Include="..\bgame\bg_local.h" />
+    <ClInclude Include="..\bgame\bg_molotov.h" />
+    <ClInclude Include="..\bgame\bg_public.h" />
+    <ClInclude Include="..\bgame\Engine.h" />
+    <ClInclude Include="..\bgame\impl.h" />
+    <ClInclude Include="..\bgame\Logger.h" />
+    <ClInclude Include="..\bgame\NewAllocator.h" />
+    <ClInclude Include="..\bgame\Process.h" />
+    <ClInclude Include="..\bgame\q_shared.h" />
+    <ClInclude Include="..\bgame\SampledStat.h" />
+    <ClInclude Include="..\bgame\surfaceflags.h" />
+    <ClInclude Include="..\bgame\str\PairDump.h" />
+    <ClInclude Include="..\bgame\str\public.h" />
+    <ClInclude Include="..\bgame\str\util.h" />
+    <ClInclude Include="..\bgame\cvar\Cvar.h" />
+    <ClInclude Include="..\bgame\cvar\impl.h" />
+    <ClInclude Include="..\bgame\cvar\public.h" />
+    <ClInclude Include="..\ui\ui_shared.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\base\base.vcxproj">
+      <Project>{ae72c3fa-551f-48c5-963a-4e92ec0298f9}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

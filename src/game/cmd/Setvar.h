@@ -1,0 +1,18 @@
+#ifndef GAME_CMD_SETVAR_H
+#define GAME_CMD_SETVAR_H
+
+///////////////////////////////////////////////////////////////////////////////
+
+class Setvar : public AbstractBuiltin
+{
+protected:
+    PostAction doExecute( Context& );
+
+public:
+    Setvar();
+    ~Setvar();
+};
+
+///////////////////////////////////////////////////////////////////////////////
+
+#endif // GAME_CMD_SETVAR_H

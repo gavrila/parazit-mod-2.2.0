@@ -1,0 +1,45 @@
+name  = PARAZIT-Mod
+namef = PARAZIT-Mod
+namex = ^1PA^3RAZ^4IT^2-Mod
+
+website   = http://parazit.ro
+author    = Gavrila
+copyright = Copyright (c) 2011-2018 Gavrila. All Rights Reserved.
+irc       = irc.freenode.net #parazitmod
+
+versionMajor = 2
+versionMinor = 2
+versionPoint = 0
+
+buildDate    = enable
+buildRelease = enable
+
+repoURL    = disable
+repoUUID   = enable
+repoRev    = enable
+repoLCRev  = enable
+repoLCDate = enable
+
+###############################################################################
+
+::linux
+
+platformName = Linux
+
+::mingw
+
+platformName = Windows
+
+::osx
+
+platformName = OSX
+
+::windows
+
+platformName = Windows
+
+###############################################################################
+
+::release
+
+buildRelease = true

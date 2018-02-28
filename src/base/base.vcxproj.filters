@@ -1,0 +1,154 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Source Files\base">
+      <UniqueIdentifier>{db44760f-2c8f-4833-a171-fd394ae82d17}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\base\base64">
+      <UniqueIdentifier>{d8665554-30af-4f82-9263-91464254858e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\base\text">
+      <UniqueIdentifier>{b70c0eaa-6720-461f-8309-431e05526e2b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\base\str">
+      <UniqueIdentifier>{c55905d5-548b-4501-bcd8-7dcf82397589}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\base\lua">
+      <UniqueIdentifier>{23bb99cf-321c-4e82-a98b-a7119d9c5fa8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Header Files\base">
+      <UniqueIdentifier>{246648f3-f09d-4fa6-857d-3c3683ba853b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\base\base64">
+      <UniqueIdentifier>{47eccfb4-82e4-4c84-b4bb-f9cb8f065b5b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\base\text">
+      <UniqueIdentifier>{f4383a9d-5fd6-4a73-b58e-ff19d9e55d4b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\base\windows">
+      <UniqueIdentifier>{2559e194-8702-4d43-8799-2266fd326c4e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\base\str">
+      <UniqueIdentifier>{19c90b29-4709-43c6-ac79-f0e4e4dd6170}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\base\lua">
+      <UniqueIdentifier>{87fd9a00-0b9b-4ea6-be34-c1253bae46eb}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="base.cpp">
+      <Filter>Source Files\base</Filter>
+    </ClCompile>
+    <ClCompile Include="base64\cksum.cpp">
+      <Filter>Source Files\base\base64</Filter>
+    </ClCompile>
+    <ClCompile Include="base64\util.cpp">
+      <Filter>Source Files\base\base64</Filter>
+    </ClCompile>
+    <ClCompile Include="text\AbstractDevice.cpp">
+      <Filter>Source Files\base\text</Filter>
+    </ClCompile>
+    <ClCompile Include="text\Buffer.cpp">
+      <Filter>Source Files\base\text</Filter>
+    </ClCompile>
+    <ClCompile Include="text\ETDevice.cpp">
+      <Filter>Source Files\base\text</Filter>
+    </ClCompile>
+    <ClCompile Include="text\InlineText.cpp">
+      <Filter>Source Files\base\text</Filter>
+    </ClCompile>
+    <ClCompile Include="text\Manipulator.cpp">
+      <Filter>Source Files\base\text</Filter>
+    </ClCompile>
+    <ClCompile Include="text\TerminalDevice.cpp">
+      <Filter>Source Files\base\text</Filter>
+    </ClCompile>
+    <ClCompile Include="str\util.cpp">
+      <Filter>Source Files\base\str</Filter>
+    </ClCompile>
+    <ClCompile Include="lua\LuaContext.cpp">
+      <Filter>Source Files\base\lua</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="text\static.cpp.inc">
+      <Filter>Source Files\base\text</Filter>
+    </None>
+    <None Include="project.h.windowsdebug">
+      <Filter>Header Files\base</Filter>
+    </None>
+    <None Include="project.h.windowsrelease">
+      <Filter>Header Files\base</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="config.h">
+      <Filter>Header Files\base</Filter>
+    </ClInclude>
+    <ClInclude Include="project.h">
+      <Filter>Header Files\base</Filter>
+    </ClInclude>
+    <ClInclude Include="public.h">
+      <Filter>Header Files\base</Filter>
+    </ClInclude>
+    <ClInclude Include="type.h">
+      <Filter>Header Files\base</Filter>
+    </ClInclude>
+    <ClInclude Include="base64\cksum.h">
+      <Filter>Header Files\base\base64</Filter>
+    </ClInclude>
+    <ClInclude Include="base64\public.h">
+      <Filter>Header Files\base\base64</Filter>
+    </ClInclude>
+    <ClInclude Include="base64\util.h">
+      <Filter>Header Files\base\base64</Filter>
+    </ClInclude>
+    <ClInclude Include="text\AbstractDevice.h">
+      <Filter>Header Files\base\text</Filter>
+    </ClInclude>
+    <ClInclude Include="text\Buffer.h">
+      <Filter>Header Files\base\text</Filter>
+    </ClInclude>
+    <ClInclude Include="text\ETDevice.h">
+      <Filter>Header Files\base\text</Filter>
+    </ClInclude>
+    <ClInclude Include="text\impl.h">
+      <Filter>Header Files\base\text</Filter>
+    </ClInclude>
+    <ClInclude Include="text\InlineText.h">
+      <Filter>Header Files\base\text</Filter>
+    </ClInclude>
+    <ClInclude Include="text\Manipulator.h">
+      <Filter>Header Files\base\text</Filter>
+    </ClInclude>
+    <ClInclude Include="text\public.h">
+      <Filter>Header Files\base\text</Filter>
+    </ClInclude>
+    <ClInclude Include="text\TerminalDevice.h">
+      <Filter>Header Files\base\text</Filter>
+    </ClInclude>
+    <ClInclude Include="windows\public.h">
+      <Filter>Header Files\base\windows</Filter>
+    </ClInclude>
+    <ClInclude Include="str\public.h">
+      <Filter>Header Files\base\str</Filter>
+    </ClInclude>
+    <ClInclude Include="str\util.h">
+      <Filter>Header Files\base\str</Filter>
+    </ClInclude>
+    <ClInclude Include="lua\LuaContext.h">
+      <Filter>Header Files\base\lua</Filter>
+    </ClInclude>
+    <ClInclude Include="lua\public.h">
+      <Filter>Header Files\base\lua</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

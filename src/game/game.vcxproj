@@ -1,0 +1,548 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{4F8332D7-5687-4875-813A-A1B7AA479C2D}</ProjectGuid>
+    <RootNamespace>game</RootNamespace>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.40219.1</_ProjectFileVersion>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.\Debug\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.\Debug\</IntDir>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</LinkIncremental>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.\Release\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.\Release\</IntDir>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</LinkIncremental>
+    <PostBuildEventUseInBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</PostBuildEventUseInBuild>
+    <PostBuildEventUseInBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</PostBuildEventUseInBuild>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Midl>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MkTypLibCompatible>true</MkTypLibCompatible>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <TargetEnvironment>Win32</TargetEnvironment>
+      <TypeLibraryName>.\Debug/game.tlb</TypeLibraryName>
+    </Midl>
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>$(SolutionDir);..\omnibot\;$(SolutionDir)\..\pak;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>_DEBUG;_WINDOWS;BUILDING_REF_GL;DEBUG;GAMEDLL;_CRT_SECURE_NO_DEPRECATE;NO_BOT_SUPPORT;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>bgame/impl.h</PrecompiledHeaderFile>
+      <PrecompiledHeaderOutputFile>./$(Configuration)/$(ProjectName).pch</PrecompiledHeaderOutputFile>
+      <AssemblerListingLocation>.\Debug/</AssemblerListingLocation>
+      <ObjectFileName>.\Debug/</ObjectFileName>
+      <ProgramDataBaseFileName>.\Debug/</ProgramDataBaseFileName>
+      <WarningLevel>Level3</WarningLevel>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Culture>0x0409</Culture>
+    </ResourceCompile>
+    <Link>
+      <AdditionalOptions>/MACHINE:I386 %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalDependencies>winmm.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <OutputFile>..\Debug/qagame_mp_x86.dll</OutputFile>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <ModuleDefinitionFile>.\game.def</ModuleDefinitionFile>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <ProgramDatabaseFile>.\Debug/qagame_mp_x86.pdb</ProgramDatabaseFile>
+      <GenerateMapFile>true</GenerateMapFile>
+      <MapFileName>.\Debug/qagame_mp_x86.map</MapFileName>
+      <SubSystem>Windows</SubSystem>
+      <BaseAddress>0x20000000</BaseAddress>
+      <RandomizedBaseAddress>true</RandomizedBaseAddress>
+      <DataExecutionPrevention>
+      </DataExecutionPrevention>
+      <ImportLibrary>.\Debug/qagame_mp_x86.lib</ImportLibrary>
+    </Link>
+    <PostBuildEvent>
+      <Message>Copy to ET</Message>
+      <Command>copy "$(TargetPath)" "$(ETDIR)\jaymod-dev\"</Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Midl>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MkTypLibCompatible>true</MkTypLibCompatible>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <TargetEnvironment>Win32</TargetEnvironment>
+      <TypeLibraryName>.\Release/game.tlb</TypeLibraryName>
+    </Midl>
+    <ClCompile>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <AdditionalIncludeDirectories>$(SolutionDir);..\omnibot\;$(SolutionDir)\..\pak;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>NDEBUG;_WINDOWS;GAMEDLL;_CRT_SECURE_NO_DEPRECATE;NO_BOT_SUPPORT;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <StringPooling>true</StringPooling>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <BufferSecurityCheck>false</BufferSecurityCheck>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>bgame/impl.h</PrecompiledHeaderFile>
+      <PrecompiledHeaderOutputFile>./$(Configuration)/$(ProjectName).pch</PrecompiledHeaderOutputFile>
+      <AssemblerListingLocation>.\Release/</AssemblerListingLocation>
+      <ObjectFileName>.\Release/</ObjectFileName>
+      <ProgramDataBaseFileName>.\Release/</ProgramDataBaseFileName>
+      <WarningLevel>Level3</WarningLevel>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Culture>0x0409</Culture>
+    </ResourceCompile>
+    <Link>
+      <AdditionalOptions>/MACHINE:I386 %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalDependencies>winmm.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <OutputFile>..\Release/qagame_mp_x86.dll</OutputFile>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <ModuleDefinitionFile>.\game.def</ModuleDefinitionFile>
+      <ProgramDatabaseFile>.\Release/qagame_mp_x86.pdb</ProgramDatabaseFile>
+      <GenerateMapFile>true</GenerateMapFile>
+      <MapFileName>.\Release/qagame_mp_x86.map</MapFileName>
+      <SubSystem>Windows</SubSystem>
+      <BaseAddress>0x20000000</BaseAddress>
+      <RandomizedBaseAddress>true</RandomizedBaseAddress>
+      <DataExecutionPrevention>
+      </DataExecutionPrevention>
+      <ImportLibrary>.\Release/qagame_mp_x86.lib</ImportLibrary>
+    </Link>
+    <PostBuildEvent>
+      <Message>Copy to ET</Message>
+      <Command>copy "$(TargetPath)" "$(ETDIR)\jaymod-dev\"</Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClInclude Include="..\bgame\bg_attack2.h" />
+    <ClInclude Include="..\bgame\bg_jaymod.h" />
+    <ClInclude Include="..\bgame\bg_local.h" />
+    <ClInclude Include="..\bgame\bg_molotov.h" />
+    <ClInclude Include="..\bgame\bg_public.h" />
+    <ClInclude Include="..\bgame\Engine.h" />
+    <ClInclude Include="..\bgame\impl.h" />
+    <ClInclude Include="..\bgame\Logger.h" />
+    <ClInclude Include="..\bgame\NewAllocator.h" />
+    <ClInclude Include="..\bgame\Process.h" />
+    <ClInclude Include="..\bgame\q_shared.h" />
+    <ClInclude Include="..\bgame\SampledStat.h" />
+    <ClInclude Include="..\bgame\surfaceflags.h" />
+    <ClInclude Include="..\bgame\str\PairDump.h" />
+    <ClInclude Include="..\bgame\str\public.h" />
+    <ClInclude Include="..\bgame\str\util.h" />
+    <ClInclude Include="..\bgame\cvar\Cvar.h" />
+    <ClInclude Include="..\bgame\cvar\impl.h" />
+    <ClInclude Include="..\bgame\cvar\public.h" />
+    <ClInclude Include="..\omnibot\common\Base_Messages.h" />
+    <ClInclude Include="..\omnibot\common\BotExports.h" />
+    <ClInclude Include="..\omnibot\common\Functions_Bot.h" />
+    <ClInclude Include="..\omnibot\common\IEngineInterface.h" />
+    <ClInclude Include="..\omnibot\common\MessageHelper.h" />
+    <ClInclude Include="..\omnibot\common\Omni-Bot.h" />
+    <ClInclude Include="..\omnibot\common\Omni-Bot_BasicTypes.h" />
+    <ClInclude Include="..\omnibot\common\Omni-Bot_BitFlags.h" />
+    <ClInclude Include="..\omnibot\common\Omni-Bot_Color.h" />
+    <ClInclude Include="..\omnibot\common\Omni-Bot_Events.h" />
+    <ClInclude Include="..\omnibot\common\Omni-Bot_Types.h" />
+    <ClInclude Include="..\omnibot\et\ET_Config.h" />
+    <ClInclude Include="..\omnibot\et\ET_Messages.h" />
+    <ClInclude Include="..\omnibot\et\g_etbot_interface.h" />
+    <ClInclude Include="AbstractBulletModel.h" />
+    <ClInclude Include="AbstractBulletVolume.h" />
+    <ClInclude Include="AbstractHitModel.h" />
+    <ClInclude Include="AbstractHitVolume.h" />
+    <ClInclude Include="AbstractStateHitModel.h" />
+    <ClInclude Include="AdminLog.h" />
+    <ClInclude Include="AdvancedHitModel.h" />
+    <ClInclude Include="AlignedCuboidHV.h" />
+    <ClInclude Include="BasicHitModel.h" />
+    <ClInclude Include="CensorDB.h" />
+    <ClInclude Include="Client.h" />
+    <ClInclude Include="cmd\Bots.h" />
+    <ClInclude Include="cmd\Setvar.h" />
+    <ClInclude Include="Database.h" />
+    <ClInclude Include="Entity.h" />
+    <ClInclude Include="EntityBulletModel.h" />
+    <ClInclude Include="EntityHitModel.h" />
+    <ClInclude Include="EtmainBulletModel.h" />
+    <ClInclude Include="EtmainHitModel.h" />
+    <ClInclude Include="etpro_mdx.h" />
+    <ClInclude Include="etpro_mdx_lut.h" />
+    <ClInclude Include="g_etbot_interface.h" />
+    <ClInclude Include="g_jaymod.h" />
+    <ClInclude Include="g_local.h" />
+    <ClInclude Include="g_molotov.h" />
+    <ClInclude Include="g_public.h" />
+    <ClInclude Include="g_team.h" />
+    <ClInclude Include="Level.h" />
+    <ClInclude Include="LevelDB.h" />
+    <ClInclude Include="MapDB.h" />
+    <ClInclude Include="MapEntity.h" />
+    <ClInclude Include="MapEntityList.h" />
+    <ClInclude Include="MapRecord.h" />
+    <ClInclude Include="MuzzleBulletModel.h" />
+    <ClInclude Include="OrientedCuboidHV.h" />
+    <ClInclude Include="OrientedHitModel.h" />
+    <ClInclude Include="Privilege.h" />
+    <ClInclude Include="PrivilegeSet.h" />
+    <ClInclude Include="SEngine.h" />
+    <ClInclude Include="SingleBulletVolume.h" />
+    <ClInclude Include="StandardHitModel.h" />
+    <ClInclude Include="TraceContext.h" />
+    <ClInclude Include="User.h" />
+    <ClInclude Include="UserDB.h" />
+    <ClInclude Include="cmd\About.h" />
+    <ClInclude Include="cmd\AbstractBuiltin.h" />
+    <ClInclude Include="cmd\AbstractCommand.h" />
+    <ClInclude Include="cmd\AdminTest.h" />
+    <ClInclude Include="cmd\Ban.h" />
+    <ClInclude Include="cmd\BanInfo.h" />
+    <ClInclude Include="cmd\BanList.h" />
+    <ClInclude Include="cmd\BanUser.h" />
+    <ClInclude Include="cmd\CancelVote.h" />
+    <ClInclude Include="cmd\Chicken.h" />
+    <ClInclude Include="cmd\CrazyGravity.h" />
+    <ClInclude Include="cmd\CryBaby.h" />
+    <ClInclude Include="cmd\DbLoad.h" />
+    <ClInclude Include="cmd\DbSave.h" />
+    <ClInclude Include="cmd\Disorient.h" />
+    <ClInclude Include="cmd\Finger.h" />
+    <ClInclude Include="cmd\Fling.h" />
+    <ClInclude Include="cmd\Flinga.h" />
+    <ClInclude Include="cmd\FTime.h" />
+    <ClInclude Include="cmd\Glow.h" />
+    <ClInclude Include="cmd\Help.h" />
+    <ClInclude Include="cmd\impl.h" />
+    <ClInclude Include="cmd\Kick.h" />
+    <ClInclude Include="cmd\Launch.h" />
+    <ClInclude Include="cmd\Launcha.h" />
+    <ClInclude Include="cmd\LevAdd.h" />
+    <ClInclude Include="cmd\LevDelete.h" />
+    <ClInclude Include="cmd\LevEdit.h" />
+    <ClInclude Include="cmd\LevInfo.h" />
+    <ClInclude Include="cmd\LevList.h" />
+    <ClInclude Include="cmd\ListPlayers.h" />
+    <ClInclude Include="cmd\Lock.h" />
+    <ClInclude Include="cmd\Lol.h" />
+    <ClInclude Include="cmd\LsPlayers.h" />
+    <ClInclude Include="cmd\Mute.h" />
+    <ClInclude Include="cmd\News.h" />
+    <ClInclude Include="cmd\NextMap.h" />
+    <ClInclude Include="cmd\Orient.h" />
+    <ClInclude Include="cmd\Page.h" />
+    <ClInclude Include="cmd\Pants.h" />
+    <ClInclude Include="cmd\PanzerWar.h" />
+    <ClInclude Include="cmd\Pause.h" />
+    <ClInclude Include="cmd\Pip.h" />
+    <ClInclude Include="cmd\Pop.h" />
+    <ClInclude Include="cmd\public.h" />
+    <ClInclude Include="cmd\PutTeam.h" />
+    <ClInclude Include="cmd\Rename.h" />
+    <ClInclude Include="cmd\Reset.h" />
+    <ClInclude Include="cmd\ResetmyXp.h" />
+    <ClInclude Include="cmd\ResetXp.h" />
+    <ClInclude Include="cmd\Restart.h" />
+    <ClInclude Include="cmd\Revive.h" />
+    <ClInclude Include="cmd\Seen.h" />
+    <ClInclude Include="cmd\SetLevel.h" />
+    <ClInclude Include="cmd\Shake.h" />
+    <ClInclude Include="cmd\Shuffle.h" />
+    <ClInclude Include="cmd\Slap.h" />
+    <ClInclude Include="cmd\Smite.h" />
+    <ClInclude Include="cmd\SniperWar.h" />
+    <ClInclude Include="cmd\Spec.h" />
+    <ClInclude Include="cmd\Spec999.h" />
+    <ClInclude Include="cmd\Splat.h" />
+    <ClInclude Include="cmd\Splata.h" />
+    <ClInclude Include="cmd\Status.h" />
+    <ClInclude Include="cmd\Swap.h" />
+    <ClInclude Include="cmd\Throw.h" />
+    <ClInclude Include="cmd\Throwa.h" />
+    <ClInclude Include="cmd\Time.h" />
+    <ClInclude Include="cmd\Unban.h" />
+    <ClInclude Include="cmd\Unlock.h" />
+    <ClInclude Include="cmd\Unmute.h" />
+    <ClInclude Include="cmd\Unpause.h" />
+    <ClInclude Include="cmd\Uptime.h" />
+    <ClInclude Include="cmd\UserDelete.h" />
+    <ClInclude Include="cmd\UserEdit.h" />
+    <ClInclude Include="cmd\UserInfo.h" />
+    <ClInclude Include="cmd\UserList.h" />
+    <ClInclude Include="cmd\util.h" />
+    <ClInclude Include="str\impl.h" />
+    <ClInclude Include="str\public.h" />
+    <ClInclude Include="str\util.h" />
+    <ClInclude Include="cvar\Cvar.h" />
+    <ClInclude Include="cvar\impl.h" />
+    <ClInclude Include="cvar\public.h" />
+    <ClInclude Include="cvar\util.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\bgame\bg_entity_event.h.inc" />
+    <None Include="..\bgame\bg_entity_event.cpp.inc" />
+    <None Include="game.def" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\bgame\bg_animation.cpp" />
+    <ClCompile Include="..\bgame\bg_animgroup.cpp" />
+    <ClCompile Include="..\bgame\bg_attack2.cpp" />
+    <ClCompile Include="..\bgame\bg_campaign.cpp" />
+    <ClCompile Include="..\bgame\bg_character.cpp" />
+    <ClCompile Include="..\bgame\bg_classes.cpp" />
+    <ClCompile Include="..\bgame\bg_jaymod.cpp" />
+    <ClCompile Include="..\bgame\bg_misc.cpp" />
+    <ClCompile Include="..\bgame\bg_molotov.cpp" />
+    <ClCompile Include="..\bgame\bg_pmove.cpp" />
+    <ClCompile Include="..\bgame\bg_slidemove.cpp" />
+    <ClCompile Include="..\bgame\bg_sscript.cpp" />
+    <ClCompile Include="..\bgame\bg_stats.cpp" />
+    <ClCompile Include="..\bgame\bg_tracemap.cpp" />
+    <ClCompile Include="..\bgame\Engine.cpp" />
+    <ClCompile Include="..\bgame\Logger.cpp" />
+    <ClCompile Include="..\bgame\Process.cpp" />
+    <ClCompile Include="..\bgame\q_math.cpp" />
+    <ClCompile Include="..\bgame\q_shared.cpp" />
+    <ClCompile Include="..\bgame\SampledStat.cpp" />
+    <ClCompile Include="..\bgame\win32\bg_cpu.cpp" />
+    <ClCompile Include="..\bgame\win32\Process.cpp">
+      <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.\Debug/gameProcess.obj</ObjectFileName>
+      <XMLDocumentationFileName Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.\Debug/gameProcess.xdc</XMLDocumentationFileName>
+      <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.\Release/cgameProcess.obj</ObjectFileName>
+      <XMLDocumentationFileName Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.\Release/cgameProcess.xdc</XMLDocumentationFileName>
+    </ClCompile>
+    <ClCompile Include="..\bgame\str\PairDump.cpp" />
+    <ClCompile Include="..\bgame\str\util.cpp" />
+    <ClCompile Include="..\bgame\cvar\Cvar.cpp" />
+    <ClCompile Include="AbstractBulletModel.cpp" />
+    <ClCompile Include="AbstractBulletVolume.cpp" />
+    <ClCompile Include="AbstractHitModel.cpp" />
+    <ClCompile Include="AbstractHitVolume.cpp" />
+    <ClCompile Include="AbstractStateHitModel.cpp" />
+    <ClCompile Include="AdminLog.cpp" />
+    <ClCompile Include="AdvancedHitModel.cpp" />
+    <ClCompile Include="AlignedCuboidHV.cpp" />
+    <ClCompile Include="BasicHitModel.cpp" />
+    <ClCompile Include="CensorDB.cpp" />
+    <ClCompile Include="Client.cpp" />
+    <ClCompile Include="cmd\Bots.cpp" />
+    <ClCompile Include="cmd\Setvar.cpp" />
+    <ClCompile Include="Database.cpp" />
+    <ClCompile Include="Engine.cpp">
+      <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(IntDir)%(Filename)1.obj</ObjectFileName>
+      <XMLDocumentationFileName Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(IntDir)%(Filename)1.xdc</XMLDocumentationFileName>
+      <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(IntDir)%(Filename)1.obj</ObjectFileName>
+      <XMLDocumentationFileName Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(IntDir)%(Filename)1.xdc</XMLDocumentationFileName>
+    </ClCompile>
+    <ClCompile Include="Entity.cpp" />
+    <ClCompile Include="EntityBulletModel.cpp" />
+    <ClCompile Include="EntityHitModel.cpp" />
+    <ClCompile Include="EtmainBulletModel.cpp" />
+    <ClCompile Include="EtmainHitModel.cpp" />
+    <ClCompile Include="etpro_mdx.cpp" />
+    <ClCompile Include="g_active.cpp" />
+    <ClCompile Include="g_alarm.cpp" />
+    <ClCompile Include="g_antilag.cpp" />
+    <ClCompile Include="g_buddy_list.cpp" />
+    <ClCompile Include="g_character.cpp" />
+    <ClCompile Include="g_client.cpp" />
+    <ClCompile Include="g_cmds.cpp" />
+    <ClCompile Include="g_cmds_ext.cpp" />
+    <ClCompile Include="g_combat.cpp" />
+    <ClCompile Include="g_config.cpp" />
+    <ClCompile Include="g_fastpanzerkillingspree.cpp" />
+    <ClCompile Include="g_fireteams.cpp" />
+    <ClCompile Include="g_items.cpp" />
+    <ClCompile Include="g_jaymod.cpp" />
+    <ClCompile Include="g_jaymod_utils.cpp" />
+    <ClCompile Include="g_killingspree.cpp" />
+    <ClCompile Include="g_main.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="g_match.cpp" />
+    <ClCompile Include="g_mem.cpp" />
+    <ClCompile Include="g_misc.cpp" />
+    <ClCompile Include="g_missile.cpp" />
+    <ClCompile Include="g_molotov.cpp" />
+    <ClCompile Include="g_mover.cpp" />
+    <ClCompile Include="g_multiview.cpp" />
+    <ClCompile Include="g_props.cpp" />
+    <ClCompile Include="g_referee.cpp" />
+    <ClCompile Include="g_script.cpp" />
+    <ClCompile Include="g_script_actions.cpp" />
+    <ClCompile Include="g_session.cpp" />
+    <ClCompile Include="g_spawn.cpp" />
+    <ClCompile Include="g_stats.cpp" />
+    <ClCompile Include="g_sv_entities.cpp" />
+    <ClCompile Include="g_svcmds.cpp" />
+    <ClCompile Include="g_syscalls.cpp" />
+    <ClCompile Include="g_systemmsg.cpp" />
+    <ClCompile Include="g_target.cpp" />
+    <ClCompile Include="g_team.cpp" />
+    <ClCompile Include="g_teammapdata.cpp" />
+    <ClCompile Include="g_trigger.cpp" />
+    <ClCompile Include="g_utils.cpp" />
+    <ClCompile Include="g_vote.cpp" />
+    <ClCompile Include="g_weapon.cpp" />
+    <ClCompile Include="Level.cpp" />
+    <ClCompile Include="LevelDB.cpp" />
+    <ClCompile Include="MapDB.cpp" />
+    <ClCompile Include="MapEntity.cpp" />
+    <ClCompile Include="MapEntityList.cpp" />
+    <ClCompile Include="MapRecord.cpp" />
+    <ClCompile Include="MuzzleBulletModel.cpp" />
+    <ClCompile Include="OrientedCuboidHV.cpp" />
+    <ClCompile Include="OrientedHitModel.cpp" />
+    <ClCompile Include="Privilege.cpp" />
+    <ClCompile Include="PrivilegeSet.cpp" />
+    <ClCompile Include="SEngine.cpp" />
+    <ClCompile Include="SingleBulletVolume.cpp" />
+    <ClCompile Include="StandardHitModel.cpp" />
+    <ClCompile Include="static.cpp" />
+    <ClCompile Include="TraceContext.cpp" />
+    <ClCompile Include="User.cpp" />
+    <ClCompile Include="UserDB.cpp" />
+    <ClCompile Include="cmd\About.cpp" />
+    <ClCompile Include="cmd\AbstractBuiltin.cpp" />
+    <ClCompile Include="cmd\AbstractCommand.cpp" />
+    <ClCompile Include="cmd\AdminTest.cpp" />
+    <ClCompile Include="cmd\Ban.cpp" />
+    <ClCompile Include="cmd\BanInfo.cpp" />
+    <ClCompile Include="cmd\BanList.cpp" />
+    <ClCompile Include="cmd\BanUser.cpp" />
+    <ClCompile Include="cmd\CancelVote.cpp" />
+    <ClCompile Include="cmd\Chicken.cpp" />
+    <ClCompile Include="cmd\CrazyGravity.cpp" />
+    <ClCompile Include="cmd\CryBaby.cpp" />
+    <ClCompile Include="cmd\DbLoad.cpp" />
+    <ClCompile Include="cmd\DbSave.cpp" />
+    <ClCompile Include="cmd\Disorient.cpp" />
+    <ClCompile Include="cmd\Finger.cpp" />
+    <ClCompile Include="cmd\Fling.cpp" />
+    <ClCompile Include="cmd\Flinga.cpp" />
+    <ClCompile Include="cmd\FTime.cpp" />
+    <ClCompile Include="cmd\Glow.cpp" />
+    <ClCompile Include="cmd\Help.cpp" />
+    <ClCompile Include="cmd\Kick.cpp" />
+    <ClCompile Include="cmd\Launch.cpp" />
+    <ClCompile Include="cmd\Launcha.cpp" />
+    <ClCompile Include="cmd\LevAdd.cpp" />
+    <ClCompile Include="cmd\LevDelete.cpp" />
+    <ClCompile Include="cmd\LevEdit.cpp" />
+    <ClCompile Include="cmd\LevInfo.cpp" />
+    <ClCompile Include="cmd\LevList.cpp" />
+    <ClCompile Include="cmd\ListPlayers.cpp" />
+    <ClCompile Include="cmd\Lock.cpp" />
+    <ClCompile Include="cmd\Lol.cpp" />
+    <ClCompile Include="cmd\LsPlayers.cpp" />
+    <ClCompile Include="cmd\Mute.cpp" />
+    <ClCompile Include="cmd\News.cpp" />
+    <ClCompile Include="cmd\NextMap.cpp" />
+    <ClCompile Include="cmd\Orient.cpp" />
+    <ClCompile Include="cmd\Page.cpp" />
+    <ClCompile Include="cmd\Pants.cpp" />
+    <ClCompile Include="cmd\PanzerWar.cpp" />
+    <ClCompile Include="cmd\Pause.cpp" />
+    <ClCompile Include="cmd\Pip.cpp" />
+    <ClCompile Include="cmd\Pop.cpp" />
+    <ClCompile Include="cmd\PutTeam.cpp" />
+    <ClCompile Include="cmd\Rename.cpp" />
+    <ClCompile Include="cmd\Reset.cpp" />
+    <ClCompile Include="cmd\ResetmyXp.cpp" />
+    <ClCompile Include="cmd\ResetXp.cpp" />
+    <ClCompile Include="cmd\Restart.cpp" />
+    <ClCompile Include="cmd\Revive.cpp" />
+    <ClCompile Include="cmd\Seen.cpp" />
+    <ClCompile Include="cmd\SetLevel.cpp" />
+    <ClCompile Include="cmd\Shake.cpp" />
+    <ClCompile Include="cmd\Shuffle.cpp" />
+    <ClCompile Include="cmd\Slap.cpp" />
+    <ClCompile Include="cmd\Smite.cpp" />
+    <ClCompile Include="cmd\SniperWar.cpp" />
+    <ClCompile Include="cmd\Spec.cpp" />
+    <ClCompile Include="cmd\Spec999.cpp" />
+    <ClCompile Include="cmd\Splat.cpp" />
+    <ClCompile Include="cmd\Splata.cpp" />
+    <ClCompile Include="cmd\Status.cpp" />
+    <ClCompile Include="cmd\Swap.cpp" />
+    <ClCompile Include="cmd\Throw.cpp" />
+    <ClCompile Include="cmd\Throwa.cpp" />
+    <ClCompile Include="cmd\Time.cpp" />
+    <ClCompile Include="cmd\Unban.cpp" />
+    <ClCompile Include="cmd\Unlock.cpp" />
+    <ClCompile Include="cmd\Unmute.cpp" />
+    <ClCompile Include="cmd\Unpause.cpp" />
+    <ClCompile Include="cmd\Uptime.cpp" />
+    <ClCompile Include="cmd\UserDelete.cpp" />
+    <ClCompile Include="cmd\UserEdit.cpp" />
+    <ClCompile Include="cmd\UserInfo.cpp" />
+    <ClCompile Include="cmd\UserList.cpp" />
+    <ClCompile Include="cmd\util.cpp">
+      <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(IntDir)%(Filename)3.obj</ObjectFileName>
+      <XMLDocumentationFileName Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(IntDir)%(Filename)3.xdc</XMLDocumentationFileName>
+      <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(IntDir)%(Filename)3.obj</ObjectFileName>
+      <XMLDocumentationFileName Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(IntDir)%(Filename)3.xdc</XMLDocumentationFileName>
+    </ClCompile>
+    <ClCompile Include="str\util.cpp">
+      <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(IntDir)%(Filename)4.obj</ObjectFileName>
+      <XMLDocumentationFileName Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(IntDir)%(Filename)4.xdc</XMLDocumentationFileName>
+      <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(IntDir)%(Filename)4.obj</ObjectFileName>
+      <XMLDocumentationFileName Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(IntDir)%(Filename)4.xdc</XMLDocumentationFileName>
+    </ClCompile>
+    <ClCompile Include="cvar\Cvar.cpp">
+      <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(IntDir)%(Filename)1.obj</ObjectFileName>
+      <XMLDocumentationFileName Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(IntDir)%(Filename)1.xdc</XMLDocumentationFileName>
+      <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(IntDir)%(Filename)1.obj</ObjectFileName>
+      <XMLDocumentationFileName Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(IntDir)%(Filename)1.xdc</XMLDocumentationFileName>
+    </ClCompile>
+    <ClCompile Include="cvar\util.cpp">
+      <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(IntDir)%(Filename)6.obj</ObjectFileName>
+      <XMLDocumentationFileName Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(IntDir)%(Filename)6.xdc</XMLDocumentationFileName>
+      <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(IntDir)%(Filename)6.obj</ObjectFileName>
+      <XMLDocumentationFileName Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(IntDir)%(Filename)6.xdc</XMLDocumentationFileName>
+    </ClCompile>
+    <ClCompile Include="..\omnibot\win32\loader.cpp" />
+    <ClCompile Include="..\omnibot\common\BotLoadLibrary.cpp" />
+    <ClCompile Include="..\omnibot\et\g_etbot_interface.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\base\base.vcxproj">
+      <Project>{ae72c3fa-551f-48c5-963a-4e92ec0298f9}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

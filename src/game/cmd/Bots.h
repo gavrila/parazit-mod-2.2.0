@@ -1,0 +1,18 @@
+#ifndef GAME_CMD_BOTS_H
+#define GAME_CMD_BOTS_H
+
+///////////////////////////////////////////////////////////////////////////////
+
+class Bots : public AbstractBuiltin
+{
+protected:
+    PostAction doExecute( Context& );
+
+public:
+    Bots();
+    ~Bots();
+};
+
+///////////////////////////////////////////////////////////////////////////////
+
+#endif // GAME_CMD_BOTS_H
